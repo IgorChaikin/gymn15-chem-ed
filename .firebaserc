@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "default": "gymn15-chem-ed"
+  },
+  "targets": {
+    "gymn15-chem-ed": {
+      "hosting": {}
+    }
+  },
+  "etags": {}
+}
