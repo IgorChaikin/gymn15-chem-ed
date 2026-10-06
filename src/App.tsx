@@ -4,9 +4,10 @@ import {
   Route, 
 } from 'react-router-dom';
 
-import Home from './pages/Home/Home';
 
 import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
+import Biography from './pages/heritage/Biography/Biography';
 
 import './App.scss';
 
@@ -19,6 +20,7 @@ function App() {
         <main className="column" id="main">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/heritage/biography" element={<Biography />} />
           </Routes>
         </main>
       </BrowserRouter>

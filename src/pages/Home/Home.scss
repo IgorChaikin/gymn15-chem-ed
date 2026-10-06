@@ -1,16 +1,32 @@
 .logo {
     align-self: center;
     display: inline-block;
-    padding: 20px 40px;
+    padding: 40px 100px;
     margin: 20px 0;
     h1 {
         margin: 0;
         display: inline-block;
+        color: #fff;
     }
+    background: linear-gradient(#035e74, #031847);
 }
 
 .nav-footer {
     align-items: start;
     justify-content: space-between;
     margin: 100px 0 20px 0;
+}
+
+// move to component
+
+.nav-footer__element {
+    height: stretch;
+    padding: 20px 40px;
+    background-size: 100% auto;
+    background-position: center;
+
+    & * {
+        color: #fff;
+        text-shadow: #000 1px 1px 3px;
+    }
 }

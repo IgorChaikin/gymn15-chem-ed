@@ -1,6 +1,12 @@
 
 
+import { Link } from 'react-router-dom';
+
 import './Home.scss';
+
+import heritageImg from '../../assets/home/heritage.jpg';
+import researchesImg from '../../assets/home/researches.jpg';
+import careerImg from '../../assets/home/career.jpg';
 
 function Home() {
   return (<>
@@ -66,33 +72,44 @@ function Home() {
     </p>
 
     <div className="row nav-footer">
-        <section className="column">
+        <section className="column nav-footer__element" 
+        style={{ 
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4) 0 90%, rgba(255, 255, 255, 1)), 
+                url('${heritageImg}')` 
+        }}>
             <h2>Наследие</h2>
             <p>(основы фундаментальной науки)</p>
             <ul>
-                <li>биография</li>
-                <li>научные исследования</li>
-                <li>виртуальный музей</li>
+                <li><Link to="/heritage/biography">биография</Link></li>
+                <li><Link to="/">научные исследования</Link></li>
+                <li><Link to="/">виртуальный музей</Link></li>
             </ul>
         </section>
 
-        <section className="column">
+        <section className="column nav-footer__element"
+        style={{ 
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4) 0 90%, rgba(255, 255, 255, 1)), 
+                url('${researchesImg}')` 
+        }}>
             <h2>Современные исследования</h2>
             <p>(цифровая химия)</p>
             <ul>
-                <li>проекты молодых учёных</li>
-                <li>виртуальные лаборатории</li>
-                <li>цифровые инструменты</li>
+                <li><Link to="/">проекты молодых учёных</Link></li>
+                <li><Link to="/">виртуальные лаборатории</Link></li>
+                <li><Link to="/">цифровые инструменты</Link></li>
             </ul>
         </section>
 
-        <section className="column">
+        <section className="column nav-footer__element"
+        style={{ 
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4) 0 90%, rgba(255, 255, 255, 1)), 
+                url('${careerImg}')` 
+        }}>
             <h2>Профессии будущего</h2>
             <p> </p>
             <ul>
-                <li>атрлас профессий будущего</li>
-                <li>образовательная траектория</li>
-                <li>цифровые инструменты</li>
+                <li><Link to="/">атлас профессий будущего</Link></li>
+                <li><Link to="/">образовательная траектория</Link></li>
             </ul>
         </section>
     </div>

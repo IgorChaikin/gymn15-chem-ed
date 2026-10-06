@@ -6,7 +6,7 @@ import { useCallback } from 'react';
 
 import './Header.scss';
 
-function App() {
+function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -20,4 +20,4 @@ function App() {
     </header>)
 }
 
-export default App
+export default Header
