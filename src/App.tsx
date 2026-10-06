@@ -6,8 +6,10 @@ import {
 
 
 import Header from './components/Header/Header';
+
 import Home from './pages/Home/Home';
 import Biography from './pages/heritage/Biography/Biography';
+import DigitalTools from './pages/researches/DigitalTools/DigitalTools';
 
 import './App.scss';
 
@@ -21,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/heritage/biography" element={<Biography />} />
+            <Route path="/researches/digital-tools" element={<DigitalTools />} />
           </Routes>
         </main>
       </BrowserRouter>

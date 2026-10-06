@@ -1,0 +1,29 @@
+.grad-img-card {
+    height: stretch;
+    padding: 20px 40px;
+    background-size: 100% auto;
+    background-position: center;
+
+    background-image: 
+        linear-gradient(rgba(#000, 0.4) 0 85%, rgba(#fff, 1)),
+        var(--bg-img-src);
+
+    &:hover {
+        background-image: 
+            linear-gradient(rgba(#000, 0.4), rgba(#000, 0.4)),
+            var(--bg-img-src);
+    }
+
+    & * {
+        color: #fff;
+        text-shadow: #000 1px 1px 3px;
+    }
+
+    a {
+        display: inline-block;
+        transition: transform 1s ease-out;
+        &:hover {
+            transform: translate(1.5em, 0);
+        }
+    }
+}

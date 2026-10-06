@@ -1,6 +1,6 @@
-
-
 import { Link } from 'react-router-dom';
+
+import GradImgCard from '../../components/GradImgCard/GradImgCard';
 
 import './Home.scss';
 
@@ -72,11 +72,7 @@ function Home() {
     </p>
 
     <div className="row nav-footer">
-        <section className="column nav-footer__element" 
-        style={{ 
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4) 0 90%, rgba(255, 255, 255, 1)), 
-                url('${heritageImg}')` 
-        }}>
+        <GradImgCard imgSrc={heritageImg}>
             <h2>Наследие</h2>
             <p>(основы фундаментальной науки)</p>
             <ul>
@@ -84,34 +80,25 @@ function Home() {
                 <li><Link to="/">научные исследования</Link></li>
                 <li><Link to="/">виртуальный музей</Link></li>
             </ul>
-        </section>
+        </GradImgCard>
 
-        <section className="column nav-footer__element"
-        style={{ 
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4) 0 90%, rgba(255, 255, 255, 1)), 
-                url('${researchesImg}')` 
-        }}>
+        <GradImgCard imgSrc={researchesImg}>
             <h2>Современные исследования</h2>
             <p>(цифровая химия)</p>
             <ul>
                 <li><Link to="/">проекты молодых учёных</Link></li>
                 <li><Link to="/">виртуальные лаборатории</Link></li>
-                <li><Link to="/">цифровые инструменты</Link></li>
+                <li><Link to="/researches/digital-tools">цифровые инструменты</Link></li>
             </ul>
-        </section>
+        </GradImgCard>
 
-        <section className="column nav-footer__element"
-        style={{ 
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4) 0 90%, rgba(255, 255, 255, 1)), 
-                url('${careerImg}')` 
-        }}>
+        <GradImgCard imgSrc={careerImg}>
             <h2>Профессии будущего</h2>
-            <p> </p>
             <ul>
                 <li><Link to="/">атлас профессий будущего</Link></li>
                 <li><Link to="/">образовательная траектория</Link></li>
             </ul>
-        </section>
+        </GradImgCard>
     </div>
   </>);
 }

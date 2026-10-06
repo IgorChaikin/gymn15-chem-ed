@@ -1,9 +1,18 @@
 .header {
-    padding: 20px;
+    padding: 25px 50px;
     height: 1.5em;
     background-color: var(--bg);
     border-bottom: 2px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 10;
+
+    &__back-btn {
+        color: var(--text-h);
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1em;
+    }
 }

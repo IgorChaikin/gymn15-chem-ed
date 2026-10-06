@@ -1,0 +1,33 @@
+
+
+.tools-list {
+    align-items: start;
+    justify-content: space-between;
+
+    &__item {
+        width: 45%;
+
+        img {
+            height: 300px;
+            width: auto;
+            object-fit: contain;
+            object-position: left top;
+            margin: 20px 0;
+            transition: transform 1s ease-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        a {
+            display: inline-block;
+            color: var(--text-h);
+            transition: transform 1s ease-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

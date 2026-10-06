@@ -3,6 +3,8 @@ import {
   useNavigate, 
 } from 'react-router-dom';
 import { useCallback } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 import './Header.scss';
 
@@ -15,7 +17,9 @@ function Header() {
 
   return (<header className="row header">
         {!isHomePage && (
-            <button onClick={navBackCallback}>← Back</button>
+          <button className="header__back-btn" onClick={navBackCallback}>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
         )}
     </header>)
 }
