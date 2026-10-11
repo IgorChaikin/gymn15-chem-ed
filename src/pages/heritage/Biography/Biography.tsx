@@ -1,9 +1,30 @@
 import './Biography.scss';
 
 import motherImg from '../../../assets/biography/mother.png';
-import fatherImg from '../../../assets/biography/father.png';
 import schoolImg from '../../../assets/biography/school.png';
 import universityImg from '../../../assets/biography/university.png';
+
+/* 
+import balloonImg from '../../../assets/biography/balloon.png';
+import barometerImg from '../../../assets/biography/boat.png';
+import boatImg from '../../../assets/biography/boat.png';
+import booksImg from '../../../assets/biography/books.png'; 
+
+import comparatorImg from '../../../assets/biography/comparator.png';
+
+import demidovTrophyImg from '../../../assets/biography/demidov-trophy.png';
+import diplomaImg from '../../../assets/biography/diploma.png'; 
+
+import farmingBooksImg from '../../../assets/biography/farming-books.png';
+*/
+import fatherImg from '../../../assets/biography/father.png';
+
+/*
+import handwritingImg from '../../../assets/biography/handwriting.png';
+import heightMeterImg from '../../../assets/biography/height-meter.png';
+
+import industrialExpertsImg from '../../../assets/biography/industrial-experts.png';
+*/
 
 function Biography() {
   return (<>

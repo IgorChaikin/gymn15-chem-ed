@@ -32,11 +32,11 @@
 
 #root {
   width: 100%;
+  height: 100svh;
   padding: 0;
   margin: 0;
   text-align: start;
   border-inline: 1px solid var(--border);
-  min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -44,11 +44,6 @@
 
 body {
   margin: 0;
-  background-image: 
-   linear-gradient(rgba(#fff, 0.87), rgba(#fff, 1)),
-   url('/background.png');
-  background-size: 100% auto;
-  background-position: center;
 }
 
 h1,
@@ -98,4 +93,26 @@ ul {
 .column {
   display: flex;
   flex-direction: column;
+}
+
+.row-stretch {
+  align-self: stretch;
+  overflow: auto;
+}
+
+.column-stretch {
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+}
+
+.chem-bg {
+  background-image: 
+    linear-gradient(rgba(#fff, 0.9), rgba(#fff, 1)),
+    url('/background.png');
+}
+
+main {
+  padding: 15px 20px;
+  min-width: 0;
 }

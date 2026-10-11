@@ -4,8 +4,7 @@ import {
   Route, 
 } from 'react-router-dom';
 
-
-import Header from './components/Header/Header';
+import NavOutlet from './components/NavOutlet/NavOutlet';
 
 import Home from './pages/Home/Home';
 import Biography from './pages/heritage/Biography/Biography';
@@ -18,14 +17,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header></Header>
-        <main className="column" id="main">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/heritage/biography" element={<Biography />} />
-            <Route path="/researches/digital-tools" element={<DigitalTools />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/docs" element={<NavOutlet />}>
+            <Route path="heritage/biography" element={<Biography />} />
+            <Route path="researches/digital-tools" element={<DigitalTools />} />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </>
   )
