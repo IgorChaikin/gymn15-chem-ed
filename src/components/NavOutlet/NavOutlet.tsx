@@ -4,11 +4,11 @@ import './NavOutlet.scss';
 import NavBackBtn from '../NavBackBtn/NavBackBtn';
 
 function NavOutlet() {
-  return (<div className="column nav-outlet">
+  return (<div className="column column-stretch nav-outlet">
       <nav className="row">
         <NavBackBtn />
       </nav>
-      <main className="chem-bg">
+      <main className="column column-stretch chem-bg">
         <Outlet></Outlet>
       </main>
     </div>)

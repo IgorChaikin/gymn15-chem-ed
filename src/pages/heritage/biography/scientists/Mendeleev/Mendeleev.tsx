@@ -1,8 +1,8 @@
-import './Biography.scss';
+import './Mendeleev.scss';
 
-import motherImg from '../../../assets/biography/mother.png';
-import schoolImg from '../../../assets/biography/school.png';
-import universityImg from '../../../assets/biography/university.png';
+import motherImg from '../../../../../assets/biography/mother.png';
+import schoolImg from '../../../../../assets/biography/school.png';
+import universityImg from '../../../../../assets/biography/university.png';
 
 /* 
 import balloonImg from '../../../assets/biography/balloon.png';
@@ -17,7 +17,7 @@ import diplomaImg from '../../../assets/biography/diploma.png';
 
 import farmingBooksImg from '../../../assets/biography/farming-books.png';
 */
-import fatherImg from '../../../assets/biography/father.png';
+import fatherImg from '../../../../../assets/biography/father.png';
 
 /*
 import handwritingImg from '../../../assets/biography/handwriting.png';
@@ -26,7 +26,7 @@ import heightMeterImg from '../../../assets/biography/height-meter.png';
 import industrialExpertsImg from '../../../assets/biography/industrial-experts.png';
 */
 
-function Biography() {
+function Mendeleev() {
   return (<>
     <h1>Биография Д.И. Менделеева</h1>
     <p><b>Дмитрий Иванович МЕНДЕЛЕЕВ ‒ гениальный русский учёный и общественный деятель. 
@@ -84,4 +84,4 @@ function Biography() {
   </>);
 }
 
-export default Biography
+export default Mendeleev

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import GradImgCard from '../../components/GradImgCard/GradImgCard';
+import NewsPreview from '../../components/NewsPreview/NewsPreview';
 
 import './Home.scss';
 
@@ -8,37 +9,46 @@ import heritageImg from '../../assets/home/heritage.jpg';
 import researchesImg from '../../assets/home/researches.jpg';
 import careerImg from '../../assets/home/career.jpg';
 
+import contestImg from '../../assets/home/contest.jpg'
+
+import techParkImg from '../../assets/home/partners/tech-park-logo.png';
+import devUniversityImg from '../../assets/home/partners/development-university.png';
+import ecologyCenterImg from '../../assets/home/partners/ecology-center.png';
+import minobrImg from '../../assets/home/partners/minobr.jpg';
+import rikzImg from '../../assets/home/partners/rikz.png';
+
 function Home() {
-    return (<div className="column home-page chem-bg">
+    return (<div className="column chem-bg home-page">
         <header className="logo">
             <h1>Диалог поколений</h1>
         </header>
-        <div className="row column-stretch">
-            <aside className="column row-stretch">
+        <div className="row column-stretch scrollable">
+            <aside className="column row-stretch column-stretch home-page__side-menu">
                 <GradImgCard imgSrc={heritageImg} 
                 title='Наследие' 
-                subtitle='(основы фундаментальной науки)'>
+                subtitle='(история и архивы)'>
                     <ul>
-                        <li><Link to="/docs/heritage/biography">биография</Link></li>
-                        <li><Link to="/">научные исследования</Link></li>
-                        <li><Link to="/">виртуальный музей</Link></li>
+                        <li><Link to="/docs/heritage/biography">Биография</Link></li>
+                        <li><Link to="/">Артефакты</Link></li>
+                        <li><Link to="/">Карта открытий (виртуальный музей)</Link></li>
+                        <li><Link to="/">Трудовые династии</Link></li>
                     </ul>
                 </GradImgCard>
 
                 <GradImgCard imgSrc={researchesImg} 
-                title='Современные исследования' 
-                subtitle='(цифровая химия)'>
+                title='Цифровая химия'>
                     <ul>
-                        <li><Link to="/">проекты молодых учёных</Link></li>
-                        <li><Link to="/">виртуальные лаборатории</Link></li>
-                        <li><Link to="/docs/researches/digital-tools">цифровые инструменты</Link></li>
+                        <li><Link to="/">Виртуальный практикум (лаборатория)</Link></li>
+                        <li><Link to="/docs/researches/digital-tools">Цифровые инструменты</Link></li>
+                        <li><Link to="/">Проекты молодых учёных</Link></li>
+                        <li><Link to="/">Технологии ИИ</Link></li>
                     </ul>
                 </GradImgCard>
 
                 <GradImgCard imgSrc={careerImg} title='Профессии будущего'>
                     <ul>
-                        <li><Link to="/">атлас профессий будущего</Link></li>
-                        <li><Link to="/">образовательная траектория</Link></li>
+                        <li><Link to="/">Атлас профессий будущего</Link></li>
+                        <li><Link to="/">Образовательная траектория (рынок труда)</Link></li>
                     </ul>
                 </GradImgCard>
             </aside>
@@ -102,7 +112,37 @@ function Home() {
                     Химия будущего будет гибридной: экспериментальной и вычислительной, рукотворной и автоматизированной, 
                     человеческой и машинной. Но её ядро останется научным – и это ядро передаётся через диалог поколений.
                 </p>
+
+                <p className="spacer"></p>
+
+                <h2>Календарь событий</h2>
+                <NewsPreview title="Первый этап республиканской олимпиады по химии" 
+                    date="2026-10-15"
+                    link="/"
+                    imgSrc={contestImg}/>
             </main>
+
+            <aside className="column row-stretch column-stretch home-page__side-partners-list">
+                <a href="https://mgtp.by/" target="_blank" className="partner-link">
+                    <img src={techParkImg} />
+                </a>
+
+                <a href="https://rcek.by/" target="_blank" className="partner-link">
+                    <img src={ecologyCenterImg} />
+                </a>
+
+                <a href="https://mgiro.minsk.edu.by/" target="_blank" className="partner-link">
+                    <img src={devUniversityImg} />
+                </a>
+
+                <a href="https://edu.gov.by/" target="_blank" className="partner-link">
+                    <img src={minobrImg} />
+                </a>
+
+                <a href="https://rikc.by/" target="_blank" className="partner-link">
+                    <img src={rikzImg} />
+                </a>
+            </aside>
         </div>
     </div>);
 }

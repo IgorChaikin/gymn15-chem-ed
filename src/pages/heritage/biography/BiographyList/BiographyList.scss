@@ -1,0 +1,10 @@
+a {
+    display: inline-block;
+    color: var(--text-h);
+    text-decoration: none;
+    transition: transform 1s ease-out;
+
+    &:hover {
+        color: var(--text);
+    }
+}

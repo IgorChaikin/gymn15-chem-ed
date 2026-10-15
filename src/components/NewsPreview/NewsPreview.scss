@@ -1,0 +1,28 @@
+.news-preview {
+    margin: 20px 0;
+
+    img {
+        height: 120px;
+        width: 160px;
+        margin: 0 20px 0 0;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 1s ease-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    h2 {
+        color: var(--text-h);
+    }
+
+    a, p {
+        color: var(text-h);
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
